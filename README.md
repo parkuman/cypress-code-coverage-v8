@@ -1,0 +1,1 @@
+# cypress-code-coverage-v8
