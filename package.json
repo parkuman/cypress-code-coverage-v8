@@ -1,0 +1,49 @@
+{
+  "name": "cypress-code-coverage-v8",
+  "version": "1.0.3",
+  "description": "Saves the code coverage collected during Cypress tests using V8",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parkuman/cypress-code-coverage-v8.git"
+  },
+  "keywords": [
+    "cypress",
+    "cypress-plugin",
+    "code",
+    "coverage",
+    "v8"
+  ],
+  "files": [
+    "task.js",
+    "task.d.ts",
+    "support.js",
+    "support.d.ts"
+  ],
+  "author": "Parker Rowe <parker@prowe.ca> (http://prowe.ca/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/parkuman/cypress-code-coverage-v8/issues"
+  },
+  "homepage": "https://github.com/parkuman/cypress-code-coverage-v8#readme",
+  "devDependencies": {
+    "@bcoe/v8-coverage": "^0.2.3",
+    "@jridgewell/trace-mapping": "^0.3.25",
+    "@types/chrome-remote-interface": "^0.31.14",
+    "@types/debug": "^4.1.12",
+    "chrome-remote-interface": "^0.33.2",
+    "cypress": "^14.0.0",
+    "debug": "^4.4.0",
+    "fast-glob": "^3.3.3",
+    "inspector": "^0.5.0",
+    "istanbul-lib-coverage": "^3.2.2",
+    "minimatch": "^10.0.1",
+    "typescript": "^5.7.3",
+    "v8-to-istanbul": "^9.3.0"
+  }
+}

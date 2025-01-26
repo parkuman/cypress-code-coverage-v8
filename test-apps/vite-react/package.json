@@ -1,0 +1,37 @@
+{
+  "name": "vite-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "coverage:test": "npm run build && concurrently \"npm run preview\" \"CYPRESS_COVERAGE=true DEBUG=cypress:v8-coverage npx cypress run --browser chrome\"",
+    "coverage:report": "npx nyc report --reporter=text --reporter=text-summary --reporter=html --temp-dir=cypress-coverage --report-dir=cypress-coverage-reports",
+    "link": "cd ../../ && npm link && cd test-apps/vite-react && npm link cypress-code-coverage-v8"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^6.0.2",
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "cypress": "^14.0.0",
+    "cypress-code-coverage-v8": "../",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "nyc": "^17.1.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.5"
+  }
+}

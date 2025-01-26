@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "checkJs": true,
+    "target": "ES2024",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+    "outDir": "."
+  },
+  "include": ["src/*.ts"],
+  "exclude": ["node_modules"]
+}

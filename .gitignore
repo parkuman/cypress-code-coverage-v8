@@ -1,0 +1,9 @@
+**/node_modules
+**/.DS_store
+**/cypress-coverage/
+**/dist/
+**/cypress-coverage*
+task.js
+task.d.ts
+support.js
+support.d.ts
