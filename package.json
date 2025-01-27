@@ -1,6 +1,6 @@
 {
   "name": "cypress-code-coverage-v8",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Saves the code coverage collected during Cypress tests using V8",
   "main": "index.js",
   "type": "module",
