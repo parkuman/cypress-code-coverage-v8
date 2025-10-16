@@ -369,9 +369,9 @@ async function v8CoverageAfterEach(testFileName: string) {
       ? JSON.parse(readFileSync(filename, "utf8"))
       : { result: [] };
 
-    // append new coverage and write
-    previousCoverage.result.push(...filteredV8Coverage);
-    writeFileSync(filename, JSON.stringify(previousCoverage), "utf8");
+    // #2 merge instead of append new coverage and write
+    const merged = mergeProcessCovs([previousCoverage, { result: filteredV8Coverage }]);
+    writeFileSync(filename, JSON.stringify(merged), "utf8");
 
     // lastly, stop the coverage for the current test
     return cdp.Profiler.stopPreciseCoverage();
